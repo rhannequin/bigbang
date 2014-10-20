@@ -1,10 +1,11 @@
 CURRENT_DIR = $(shell pwd)
-PARENT_DIR = $(CURRENT_DIR)/..
+GITCONFIG = $(HOME)/.gitconfig
+DOTFILES = $(CURRENT_DIR)/../dotfiles
 
-all: toto
+all: link
 
-toto:
-	cat $(PARENT_DIR)/dotfiles/README.md
+link:
+	rm -f $(GITCONFIG)
+	ln -s $(DOTFILES)/gitconfig $(GITCONFIG)
 
-
-.PHONY: all toto
+.PHONY: all link
