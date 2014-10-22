@@ -1,6 +1,6 @@
 CURRENT_DIR = $(shell pwd)
-GITCONFIG = $(HOME)/.gitconfig
-DOTFILES = $(CURRENT_DIR)/../dotfiles
+GITCONFIG   = $(HOME)/.gitconfig
+DOTFILES    = $(CURRENT_DIR)/../dotfiles
 
 all: $(DOTFILES)
 
